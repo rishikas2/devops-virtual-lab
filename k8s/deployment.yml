@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: devops-container
-        image: rishikas2/devops-lab-app:IMAGE_TAG
+        image: rishikas2/devops-lab-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80

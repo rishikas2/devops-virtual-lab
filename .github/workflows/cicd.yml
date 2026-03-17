@@ -29,7 +29,4 @@ jobs:
         sed -i "s|IMAGE_TAG|${{ env.IMAGE_TAG }}|g" k8s/deployment.yml
         kubectl apply -f k8s/deployment.yml
 
-    - name: Set kubeconfig
-      run: |
-        echo "${{ secrets.KUBECONFIG_DATA }}" > kubeconfig
-        export KUBECONFIG=kubeconfig
+    
