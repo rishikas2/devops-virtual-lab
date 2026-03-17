@@ -26,7 +26,6 @@ jobs:
 
     - name: Update Kubernetes Deployment
       run: |
-        sed -i "s|IMAGE_TAG|${{ env.IMAGE_TAG }}|g" k8s/deployment.yml
-        kubectl apply -f k8s/deployment.yml
+        kubectl set image deployment/devops-app devops-container=${{ secrets.DOCKER_USERNAME }}/devops-lab-app:${{ env.IMAGE_TAG }}
 
     
