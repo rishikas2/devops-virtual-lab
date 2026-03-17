@@ -1,0 +1,11 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# AWS Key
+*.pem
+
+# OS files
+.DS_Store
+Thumbs.db
